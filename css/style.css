@@ -56,16 +56,23 @@ h4 {
 
 .subtitulo {
   font-size: 18px;
-  opacity: 0.8;
 }
 
 /* --- ESTILO PARA EL LOGO DEL BAR --- */
 .logo-bar {
-  /* Ajustamos el tamaño del logo para que se vea prominente */
+  /* CAMBIO: Usaremos 150px, que se ve grande y bien centrado en el móvil. */
   width: 150px;
   height: auto;
-  /* Espacio grande debajo para separarlo del título H1 */
+  /* Espacio debajo del logo para separarlo del título H1 */
   margin-bottom: 25px;
+
+  /* **AJUSTE OPCIONAL** para disimular el fondo del logo: */
+  /* Aplicamos un borde circular para que parezca un logo circular */
+  border-radius: 50%;
+  /* Borde blanco para darle un marco */
+  border: 4px solid white;
+  /* Sombra para que destaque */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* --- PÁGINA PRINCIPAL (index.html) --- */
