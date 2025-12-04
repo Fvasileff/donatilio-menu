@@ -41,7 +41,7 @@ h4 {
 }
 
 .header h1 {
-  color: #b8860b; /* Título principal en color dorado */
+  color: #e06e10; /* Título principal en color dorado */
   margin-bottom: 5px;
   font-size: 40px;
   letter-spacing: 3px;
@@ -71,7 +71,7 @@ h4 {
   text-decoration: none;
   color: inherit;
   /* Borde sutil en el color de acento */
-  border-left: 5px solid #b8860b;
+  border-left: 5px solid #e06e10;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background 0.3s ease;
 
@@ -95,7 +95,7 @@ h4 {
   /* Asegura que el icono y el texto estén centrados verticalmente entre sí */
   align-items: center;
 
-  color: #b8860b; /* Títulos de tarjetas en dorado */
+  color: #e06e10; /* Títulos de tarjetas en dorado */
   margin: 0 0 5px 0;
   font-size: 26px;
   padding-top: 15px; /* Agrega espacio superior */
@@ -123,8 +123,8 @@ h4 {
 
 .categoria h2 {
   /* Doble línea de acento */
-  border-bottom: 1px solid #b8860b;
-  border-top: 1px solid #b8860b;
+  border-bottom: 1px solid #e06e10;
+  border-top: 1px solid #e06e10;
   padding: 15px 0;
   margin-bottom: 25px;
   font-size: 24px;
@@ -163,26 +163,26 @@ h4 {
 .precio {
   font-weight: bold;
   font-size: 19px;
-  color: #b8860b; /* El precio en dorado */
+  color: #e06e10; /* El precio en dorado */
   flex-shrink: 0;
   margin-left: 20px;
   letter-spacing: 1px;
 }
 
 .volver {
-  color: #b8860b;
+  color: #e06e10;
   text-decoration: none;
   font-size: 16px;
   display: inline-block;
   margin-top: 15px;
   padding: 8px 15px;
-  border: 1px solid #b8860b;
+  border: 1px solid #e06e10;
   border-radius: 4px;
   transition: background 0.3s, color 0.3s;
 }
 
 .volver:hover {
-  background: #b8860b;
+  background: #e06e10;
   color: #111111; /* Texto oscuro al hacer hover */
 }
 
@@ -190,7 +190,7 @@ h4 {
 .material-symbols-outline {
   font-family: "Material Symbols Outlined";
   /* Se elimina la configuración de variación porque ahora está en @font-face */
-  color: #b8860b; /* Mantiene el color dorado/elegante */
+  color: #e06e10; /* Mantiene el color dorado/elegante */
   /* Ajuste de margen para la separación del texto */
   margin-right: 10px;
   font-size: 1.2em;
