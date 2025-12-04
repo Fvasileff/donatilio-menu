@@ -34,13 +34,14 @@ h4 {
 /* --- ENCABEZADO GLOBAL --- */
 .header {
   text-align: center;
-  padding: 20px 20px;
-  /* CAMBIO: Negro puro para que el fondo coincida con el logo */
+  /* CAMBIO: Reducimos el padding superior/inferior de 20px a 15px */
+  padding: 15px 20px;
+
+  /* Resto del código... */
   background: #000000;
   color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra fuerte */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-
 .header h1 {
   /* CAMBIO: Color blanco */
   color: #ffffff;
@@ -60,12 +61,12 @@ h4 {
 
 /* --- ESTILO PARA EL LOGO DEL BAR --- */
 .logo-bar {
-  /* CAMBIO: Aumentamos el tamaño a 200px para que se vea más grande */
-  width: 200px;
+  /* CAMBIO: Aumentamos el tamaño a 250px para que destaque en el móvil */
+  width: 250px;
   height: auto;
 
-  /* CAMBIO: Reducimos el margen inferior a 10px para acercarlo al título */
-  margin-bottom: 10px;
+  /* CAMBIO: Reducimos el margen inferior de 10px a 5px (o incluso 0px si quieres pegarlo más) */
+  margin-bottom: 5px;
 
   background: transparent;
 }
