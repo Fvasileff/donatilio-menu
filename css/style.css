@@ -60,19 +60,16 @@ h4 {
 
 /* --- ESTILO PARA EL LOGO DEL BAR --- */
 .logo-bar {
-  /* CAMBIO: Usaremos 150px, que se ve grande y bien centrado en el móvil. */
+  /* Mantenemos el tamaño y la separación que funciona bien */
   width: 150px;
   height: auto;
-  /* Espacio debajo del logo para separarlo del título H1 */
   margin-bottom: 25px;
 
-  /* **AJUSTE OPCIONAL** para disimular el fondo del logo: */
-  /* Aplicamos un borde circular para que parezca un logo circular */
-  border-radius: 50%;
-  /* Borde blanco para darle un marco */
-  border: 4px solid white;
-  /* Sombra para que destaque */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  /* Eliminamos el borde circular y la sombra que ya no son necesarios 
+     porque el logo es transparente y se integra solo. */
+  /* border-radius: 50%; <--- ELIMINAR */
+  /* border: 4px solid white; <--- ELIMINAR */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); <--- ELIMINAR o dejar si quieres una sombra sutil */
 }
 
 /* --- PÁGINA PRINCIPAL (index.html) --- */
