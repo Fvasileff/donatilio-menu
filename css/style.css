@@ -35,13 +35,18 @@ h4 {
 .header {
   text-align: center;
   padding: 30px 20px;
-  background: #111111; /* Negro más intenso para el header */
+  /* CAMBIO: Negro puro para que el fondo coincida con el logo */
+  background: #000000;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra fuerte */
 }
 
 .header h1 {
-  color: #e06e10; /* Título principal en color dorado */
+  /* CAMBIO: Color blanco */
+  color: #ffffff;
+  /* CAMBIO: Letra más gruesa */
+  font-weight: bold;
+
   margin-bottom: 5px;
   font-size: 40px;
   letter-spacing: 3px;
@@ -52,6 +57,15 @@ h4 {
 .subtitulo {
   font-size: 18px;
   opacity: 0.8;
+}
+
+/* --- ESTILO PARA EL LOGO DEL BAR --- */
+.logo-bar {
+  /* Ajustamos el tamaño del logo para que se vea prominente */
+  width: 150px;
+  height: auto;
+  /* Espacio grande debajo para separarlo del título H1 */
+  margin-bottom: 25px;
 }
 
 /* --- PÁGINA PRINCIPAL (index.html) --- */
@@ -70,7 +84,7 @@ h4 {
   border-radius: 8px;
   text-decoration: none;
   color: inherit;
-  /* Borde sutil en el color de acento */
+  /* Color de acento NARANJA */
   border-left: 5px solid #e06e10;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background 0.3s ease;
@@ -95,7 +109,8 @@ h4 {
   /* Asegura que el icono y el texto estén centrados verticalmente entre sí */
   align-items: center;
 
-  color: #e06e10; /* Títulos de tarjetas en dorado */
+  /* Color de acento NARANJA */
+  color: #e06e10;
   margin: 0 0 5px 0;
   font-size: 26px;
   padding-top: 15px; /* Agrega espacio superior */
@@ -122,7 +137,7 @@ h4 {
 }
 
 .categoria h2 {
-  /* Doble línea de acento */
+  /* Doble línea de acento NARANJA */
   border-bottom: 1px solid #e06e10;
   border-top: 1px solid #e06e10;
   padding: 15px 0;
@@ -163,25 +178,29 @@ h4 {
 .precio {
   font-weight: bold;
   font-size: 19px;
-  color: #e06e10; /* El precio en dorado */
+  /* Precio en NARANJA */
+  color: #e06e10;
   flex-shrink: 0;
   margin-left: 20px;
   letter-spacing: 1px;
 }
 
 .volver {
+  /* Color NARANJA */
   color: #e06e10;
   text-decoration: none;
   font-size: 16px;
   display: inline-block;
   margin-top: 15px;
   padding: 8px 15px;
+  /* Borde NARANJA */
   border: 1px solid #e06e10;
   border-radius: 4px;
   transition: background 0.3s, color 0.3s;
 }
 
 .volver:hover {
+  /* Fondo NARANJA al hacer hover */
   background: #e06e10;
   color: #111111; /* Texto oscuro al hacer hover */
 }
@@ -189,8 +208,8 @@ h4 {
 /* --- ESTILO PARA ICONOS DE GOOGLE MATERIAL (OUTLINE/LÍNEA) --- */
 .material-symbols-outline {
   font-family: "Material Symbols Outlined";
-  /* Se elimina la configuración de variación porque ahora está en @font-face */
-  color: #e06e10; /* Mantiene el color dorado/elegante */
+  /* Color NARANJA */
+  color: #e06e10;
   /* Ajuste de margen para la separación del texto */
   margin-right: 10px;
   font-size: 1.2em;
@@ -200,18 +219,4 @@ h4 {
 /* El estilo de los H2 en las tarjetas individuales debe tener la clase iconificada */
 .categoria h2 .material-symbols-outline {
   font-size: 1.5em;
-}
-
-/* --- ESTILO PARA EL LOGO DEL BAR --- */
-.logo-bar {
-  /* Ajusta el ancho de la imagen. 
-       Un valor de 80px (el doble del tamaño del título 40px) 
-       suele quedar bien para un logo sobre texto. */
-  width: 80px;
-  height: auto; /* Mantiene la proporción para que no se deforme */
-
-  /* Centrado ya está garantizado por 'text-align: center' en .header */
-
-  /* Agrega un espacio pequeño debajo para separarlo del título H1 */
-  margin-bottom: 5px;
 }
