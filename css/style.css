@@ -1,0 +1,203 @@
+/* --- REGISTRO DE LA FUENTE LOCAL (SOLUCIÓN FINAL A LA LENTITUD) --- */
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 400;
+  /* La ruta asume que el archivo 'simbolos.ttf' está en la misma carpeta que styles.css */
+  src: url("MaterialSymbolsOutlined-VariableFont_FILL,GRAD,opsz,wght.ttf")
+    format("truetype");
+
+  /* CONFIGURACIÓN DE VARIACIÓN: Mover la configuración de variable aquí para que funcione con TTF */
+  font-feature-settings: "liga" 1;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif; /* Fuente con serifa para elegancia */
+  background: #1c1c1c; /* Fondo oscuro casi negro */
+  color: #f0f0f0; /* Texto claro */
+  line-height: 1.6;
+  /* Añadimos un pequeño borde para simular un marco y textura */
+  border: 10px solid #282828;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #f0f0f0;
+  font-weight: 400; /* Peso normal */
+}
+
+/* --- ENCABEZADO GLOBAL --- */
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #111111; /* Negro más intenso para el header */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra fuerte */
+}
+
+.header h1 {
+  color: #b8860b; /* Título principal en color dorado */
+  margin-bottom: 5px;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Times New Roman", serif; /* Fuente clásica */
+}
+
+.subtitulo {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* --- PÁGINA PRINCIPAL (index.html) --- */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  display: block;
+  background: #252525; /* Fondo de tarjeta gris oscuro */
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  /* Borde sutil en el color de acento */
+  border-left: 5px solid #b8860b;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  /* ALINEACIÓN FINAL DE LA TARJETA */
+  text-align: center;
+  padding: 10px; /* Padding general ajustado */
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  background: #303030; /* Oscurece un poco al pasar el ratón */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ALINEACIÓN DEL H2: Centra el icono y el texto como un bloque */
+.menu-card h2 {
+  /* Clave para alinear el icono y el texto uno al lado del otro */
+  display: flex;
+  /* Centra todo el bloque H2 horizontalmente dentro de la tarjeta */
+  justify-content: center;
+  /* Asegura que el icono y el texto estén centrados verticalmente entre sí */
+  align-items: center;
+
+  color: #b8860b; /* Títulos de tarjetas en dorado */
+  margin: 0 0 5px 0;
+  font-size: 26px;
+  padding-top: 15px; /* Agrega espacio superior */
+  margin-bottom: 5px; /* Margen menor para acercar el párrafo */
+}
+
+.menu-card p {
+  font-weight: 300;
+  color: #aaaaaa;
+  /* Alineación de la descripción */
+  text-align: center;
+  padding: 0 10px 20px 10px;
+}
+
+/* --- CARTAS INDIVIDUALES (mediodia, cafeteria, noche) --- */
+.carta {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.categoria {
+  margin-bottom: 50px;
+}
+
+.categoria h2 {
+  /* Doble línea de acento */
+  border-bottom: 1px solid #b8860b;
+  border-top: 1px solid #b8860b;
+  padding: 15px 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 0;
+  /* Separador punteado para un look de menú clásico */
+  border-bottom: 1px dashed #444;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.nombre h4 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.nombre p {
+  margin: 0;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 19px;
+  color: #b8860b; /* El precio en dorado */
+  flex-shrink: 0;
+  margin-left: 20px;
+  letter-spacing: 1px;
+}
+
+.volver {
+  color: #b8860b;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: 1px solid #b8860b;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.volver:hover {
+  background: #b8860b;
+  color: #111111; /* Texto oscuro al hacer hover */
+}
+
+/* --- ESTILO PARA ICONOS DE GOOGLE MATERIAL (OUTLINE/LÍNEA) --- */
+.material-symbols-outline {
+  font-family: "Material Symbols Outlined";
+  /* Se elimina la configuración de variación porque ahora está en @font-face */
+  color: #b8860b; /* Mantiene el color dorado/elegante */
+  /* Ajuste de margen para la separación del texto */
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* El estilo de los H2 en las tarjetas individuales debe tener la clase iconificada */
+.categoria h2 .material-symbols-outline {
+  font-size: 1.5em;
+}
