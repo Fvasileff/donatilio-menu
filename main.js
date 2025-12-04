@@ -1,6 +1,6 @@
 // Función para solicitar un archivo HTML y colocar su contenido en un contenedor
 function loadFragment(url, targetId) {
-  // 1. Inicia la solicitud para obtener el archivo (url: 'bebidas.html')
+  // 1. Inicia la solicitud para obtener el archivo (url: '/donatilio-menu/bebidas.html')
   fetch(url)
     .then((response) => {
       // Si la solicitud no es exitosa (ej: 404 Not Found), lanza un error
@@ -21,12 +21,16 @@ function loadFragment(url, targetId) {
     // Muestra errores en la consola si algo falla
     .catch((error) => console.error("Fallo en la carga del fragmento:", error));
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
 
   // Verifica si la página es Mediodía O Noche
   if (path.includes("mediodia.html") || path.includes("noche.html")) {
-    // Llama a la función de carga si estamos en alguna de esas dos páginas
-    loadFragment("bebidas.html", "bebidas-genericas-placeholder");
+    // Llama a la función de carga con la RUTA ABSOLUTA para GitHub Pages
+    loadFragment(
+      "/donatilio-menu/bebidas.html",
+      "bebidas-genericas-placeholder"
+    );
   }
 });
