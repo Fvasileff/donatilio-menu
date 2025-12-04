@@ -34,7 +34,7 @@ h4 {
 /* --- ENCABEZADO GLOBAL --- */
 .header {
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   /* CAMBIO: Negro puro para que el fondo coincida con el logo */
   background: #000000;
   color: #fff;
@@ -60,9 +60,13 @@ h4 {
 
 /* --- ESTILO PARA EL LOGO DEL BAR --- */
 .logo-bar {
-  width: 150px;
+  /* CAMBIO: Aumentamos el tamaño a 200px para que se vea más grande */
+  width: 200px;
   height: auto;
-  margin-bottom: 25px;
+
+  /* CAMBIO: Reducimos el margen inferior a 10px para acercarlo al título */
+  margin-bottom: 10px;
+
   background: transparent;
 }
 
