@@ -201,3 +201,17 @@ h4 {
 .categoria h2 .material-symbols-outline {
   font-size: 1.5em;
 }
+
+/* --- ESTILO PARA EL LOGO DEL BAR --- */
+.logo-bar {
+  /* Ajusta el ancho de la imagen. 
+       Un valor de 80px (el doble del tamaño del título 40px) 
+       suele quedar bien para un logo sobre texto. */
+  width: 80px;
+  height: auto; /* Mantiene la proporción para que no se deforme */
+
+  /* Centrado ya está garantizado por 'text-align: center' en .header */
+
+  /* Agrega un espacio pequeño debajo para separarlo del título H1 */
+  margin-bottom: 5px;
+}
