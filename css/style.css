@@ -130,7 +130,7 @@ h4 {
 
 /* --- CARTAS INDIVIDUALES (mediodia, cafeteria, noche) --- */
 .carta {
-  padding: 30px 20px;
+  padding: 30px 0px;
   max-width: 800px;
   margin: auto;
 }
@@ -155,7 +155,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 18px 0;
+  padding: 18px 20px;
   /* Separador punteado para un look de menú clásico */
   border-bottom: 1px dashed #444;
 }
@@ -222,4 +222,51 @@ h4 {
 /* El estilo de los H2 en las tarjetas individuales debe tener la clase iconificada */
 .categoria h2 .material-symbols-outline {
   font-size: 1.5em;
+}
+.search-container {
+  /* Permite posicionar elementos internos de forma absoluta con respecto a él */
+  position: relative;
+  /* Puedes añadir aquí otras propiedades de centrado si es necesario */
+  margin: 20px auto;
+  width: 70%;
+  max-width: 500px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  padding-left: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-container input::placeholder {
+  color: #aaa;
+}
+
+.search-container input:focus {
+  border-color: #ff8c1a;
+  box-shadow: 0 0 0 2px rgba(255, 140, 26, 0.25);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%; /* Lo mueve a la mitad de la altura del contenedor */
+  left: 15px; /* Lo mueve 15px desde el borde izquierdo */
+  transform: translateY(-50%); /* Ajuste fino para centrarlo verticalmente */
+  color: #ffa500; /* Color naranja o similar para que resalte */
+  font-size: 1.2em; /* Hace que la lupa sea un poco más grande */
+  pointer-events: none; /* Crucial: permite hacer clic a través del icono para el input */
+}
+
+/* ⬅️ Esto solo se aplica en pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+  /* Aquí va la regla específica para el celular */
+  .search-container {
+    margin: 20px 30px auto; /* ⬅️ El margen que tú necesitas */
+  }
 }

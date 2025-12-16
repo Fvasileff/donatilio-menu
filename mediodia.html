@@ -6,107 +6,179 @@
     <title>Mediodía - Donatilio</title>
 
     <link rel="stylesheet" href="/donatilio-menu/css/style.css" />
-
-    <script src="main.js"></script>
   </head>
+
   <body>
     <header class="header">
       <h1>Menú del Mediodía</h1>
       <a class="volver" href="index.html">← Volver al inicio</a>
     </header>
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="inputBuscador"
+        placeholder="Buscar platos, tragos o categorías..."
+        autocomplete="off"
+        onkeyup="filtrarElementos()"
+      />
+    </div>
 
     <main class="carta">
       <section class="categoria">
         <h2>Platos Principales</h2>
 
-        <div class="item">
+        <div
+          class="item elemento-buscable"
+          data-nombre="Pollo al horno con guarnicion Principal"
+        >
           <div class="nombre">
             <h4>Pollo al horno con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6000</span>
         </div>
 
-        <div class="item">
+        <div
+          class="item elemento-buscable"
+          data-nombre="Tartas variedades diversas Principal Vegetariano"
+        >
           <div class="nombre">
             <h4>Tartas de variedades diversas</h4>
+
             <p>Consultar variedades</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Calzones variedades diversas Principal"
+        >
           <div class="nombre">
             <h4>Calzones de variedades diversas</h4>
+
             <p>Consultar variedades</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Kippies con guarnicion Principal Carne"
+        >
           <div class="nombre">
             <h4>Kippies con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Albondigas con guarnicion Principal Carne"
+        >
           <div class="nombre">
             <h4>Albondigas con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Costeleta Ternera con guarnicion Principal"
+        >
           <div class="nombre">
             <h4>Costeleta con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Costeleta de cerdo con guarnicion Principal Cerdo"
+        >
           <div class="nombre">
             <h4>Costeleta de cerdo con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Bombas de carne con guarnicion Principal"
+        >
           <div class="nombre">
             <h4>Bombas de carne con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Bombas de queso con guarnicion Principal Vegetariano"
+        >
           <div class="nombre">
             <h4>Bombas de queso con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Fideos tipo caseros con guarnicion Principal Pastas"
+        >
           <div class="nombre">
             <h4>Fideos tipo caseros con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Suprema Pollo con guarnicion Principal"
+        >
           <div class="nombre">
             <h4>Suprema con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Mila de cerdo con guarnicion Principal Cerdo"
+        >
           <div class="nombre">
             <h4>Mila de cerdo con guarnicion</h4>
+
             <p>Consultar guarnicion</p>
           </div>
           <span class="precio">$6500</span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Ensalada especial Lechuga Tomate Zanahoria Huevo Principal Vegetariano"
+        >
           <div class="nombre">
             <h4>Ensalada especial</h4>
+
             <p>Lechuga , tomate, zanahoria y huevo.</p>
           </div>
           <span class="precio">$6500</span>
@@ -116,31 +188,46 @@
       <section class="categoria">
         <h2>Guarniciones</h2>
 
-        <div class="item">
+        <div
+          class="item elemento-buscable"
+          data-nombre="Papas Fritas Guarnicion"
+        >
           <div class="nombre">
             <h4>Papas Fritas</h4>
+
             <p></p>
           </div>
           <span class="precio"></span>
         </div>
 
-        <div class="item">
+        <div
+          class="item elemento-buscable"
+          data-nombre="Arroz frito Guarnicion"
+        >
           <div class="nombre">
             <h4>Arroz frito</h4>
+
             <p></p>
           </div>
           <span class="precio"></span>
         </div>
-        <div class="item">
+
+        <div class="item elemento-buscable" data-nombre="Pure Guarnicion">
           <div class="nombre">
             <h4>Pure</h4>
+
             <p></p>
           </div>
           <span class="precio"></span>
         </div>
-        <div class="item">
+
+        <div
+          class="item elemento-buscable"
+          data-nombre="Ensalada mixta Guarnicion Lechuga Tomate"
+        >
           <div class="nombre">
             <h4>Ensalada mixta</h4>
+
             <p></p>
           </div>
           <span class="precio"></span>
@@ -148,5 +235,7 @@
       </section>
       <div id="bebidas-genericas-placeholder"></div>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
