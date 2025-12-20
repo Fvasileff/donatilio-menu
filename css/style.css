@@ -1,24 +1,25 @@
-/* --- REGISTRO DE LA FUENTE LOCAL (SOLUCIÓN FINAL A LA LENTITUD) --- */
+/* ==========================================================================
+   1. REGISTRO DE FUENTES Y VARIABLES
+   ========================================================================== */
 @font-face {
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: 400;
-  /* La ruta asume que el archivo 'simbolos.ttf' está en la misma carpeta que styles.css */
   src: url("MaterialSymbolsOutlined-VariableFont_FILL,GRAD,opsz,wght.ttf")
     format("truetype");
-
-  /* CONFIGURACIÓN DE VARIACIÓN: Mover la configuración de variable aquí para que funcione con TTF */
   font-feature-settings: "liga" 1;
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
 }
 
+/* ==========================================================================
+   2. ESTILOS GLOBALES
+   ========================================================================== */
 body {
   margin: 0;
-  font-family: "Georgia", serif; /* Fuente con serifa para elegancia */
-  background: #1c1c1c; /* Fondo oscuro casi negro */
-  color: #f0f0f0; /* Texto claro */
+  font-family: "Georgia", serif;
+  background: #1c1c1c;
+  color: #f0f0f0;
   line-height: 1.6;
-  /* Añadimos un pequeño borde para simular un marco y textura */
   border: 10px solid #282828;
   min-height: 100vh;
 }
@@ -28,50 +29,44 @@ h2,
 h3,
 h4 {
   color: #f0f0f0;
-  font-weight: 400; /* Peso normal */
+  font-weight: 400;
 }
 
-/* --- ENCABEZADO GLOBAL --- */
+/* ==========================================================================
+   3. ENCABEZADO (HEADER) Y LOGO
+   ========================================================================== */
 .header {
   text-align: center;
-  /* CAMBIO: Reducimos el padding superior/inferior de 20px a 15px */
   padding: 15px 20px;
-
-  /* Resto del código... */
   background: #000000;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-.header h1 {
-  /* CAMBIO: Color blanco */
-  color: #ffffff;
-  /* CAMBIO: Letra más gruesa */
-  font-weight: bold;
 
+.header h1 {
+  color: #ffffff;
+  font-weight: bold;
   margin-bottom: 5px;
   font-size: 40px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  font-family: "Times New Roman", serif; /* Fuente clásica */
+  font-family: "Times New Roman", serif;
 }
 
 .subtitulo {
   font-size: 18px;
 }
 
-/* --- ESTILO PARA EL LOGO DEL BAR --- */
 .logo-bar {
-  /* CAMBIO: Aumentamos el tamaño a 250px para que destaque en el móvil */
   width: 250px;
   height: auto;
-
-  /* CAMBIO: Reducimos el margen inferior de 10px a 5px (o incluso 0px si quieres pegarlo más) */
   margin-bottom: 5px;
-
   background: transparent;
 }
 
-/* --- PÁGINA PRINCIPAL (index.html) --- */
+/* ==========================================================================
+   4. PÁGINA PRINCIPAL (INDEX)
+   ========================================================================== */
 .menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -83,150 +78,45 @@ h4 {
 
 .menu-card {
   display: block;
-  background: #252525; /* Fondo de tarjeta gris oscuro */
+  background: #252525;
   border-radius: 8px;
   text-decoration: none;
   color: inherit;
-  /* Color de acento NARANJA */
   border-left: 5px solid #e06e10;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background 0.3s ease;
-
-  /* ALINEACIÓN FINAL DE LA TARJETA */
   text-align: center;
-  padding: 10px; /* Padding general ajustado */
+  padding: 10px;
 }
 
 .menu-card:hover {
   transform: translateY(-5px);
-  background: #303030; /* Oscurece un poco al pasar el ratón */
+  background: #303030;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* ALINEACIÓN DEL H2: Centra el icono y el texto como un bloque */
 .menu-card h2 {
-  /* Clave para alinear el icono y el texto uno al lado del otro */
   display: flex;
-  /* Centra todo el bloque H2 horizontalmente dentro de la tarjeta */
   justify-content: center;
-  /* Asegura que el icono y el texto estén centrados verticalmente entre sí */
   align-items: center;
-
-  /* Color de acento NARANJA */
   color: #e06e10;
   margin: 0 0 5px 0;
   font-size: 26px;
-  padding-top: 15px; /* Agrega espacio superior */
-  margin-bottom: 5px; /* Margen menor para acercar el párrafo */
+  padding-top: 15px;
 }
 
 .menu-card p {
   font-weight: 300;
   color: #aaaaaa;
-  /* Alineación de la descripción */
   text-align: center;
   padding: 0 10px 20px 10px;
 }
 
-/* --- CARTAS INDIVIDUALES (mediodia, cafeteria, noche) --- */
-.carta {
-  padding: 30px 0px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.categoria {
-  margin-bottom: 50px;
-}
-
-.categoria h2 {
-  /* Doble línea de acento NARANJA */
-  border-bottom: 1px solid #e06e10;
-  border-top: 1px solid #e06e10;
-  padding: 15px 0;
-  margin-bottom: 25px;
-  font-size: 24px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #f0f0f0;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 18px 20px;
-  /* Separador punteado para un look de menú clásico */
-  border-bottom: 1px dashed #444;
-}
-
-.item:last-child {
-  border-bottom: none;
-}
-
-.nombre h4 {
-  margin: 0 0 4px 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #f0f0f0;
-}
-
-.nombre p {
-  margin: 0;
-  font-size: 14px;
-  color: #999999;
-  line-height: 1.4;
-}
-
-.precio {
-  font-weight: bold;
-  font-size: 19px;
-  /* Precio en NARANJA */
-  color: #e06e10;
-  flex-shrink: 0;
-  margin-left: 20px;
-  letter-spacing: 1px;
-}
-
-.volver {
-  /* Color NARANJA */
-  color: #e06e10;
-  text-decoration: none;
-  font-size: 16px;
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 15px;
-  /* Borde NARANJA */
-  border: 1px solid #e06e10;
-  border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
-}
-
-.volver:hover {
-  /* Fondo NARANJA al hacer hover */
-  background: #e06e10;
-  color: #111111; /* Texto oscuro al hacer hover */
-}
-
-/* --- ESTILO PARA ICONOS DE GOOGLE MATERIAL (OUTLINE/LÍNEA) --- */
-.material-symbols-outline {
-  font-family: "Material Symbols Outlined";
-  /* Color NARANJA */
-  color: #e06e10;
-  /* Ajuste de margen para la separación del texto */
-  margin-right: 10px;
-  font-size: 1.2em;
-  vertical-align: middle;
-}
-
-/* El estilo de los H2 en las tarjetas individuales debe tener la clase iconificada */
-.categoria h2 .material-symbols-outline {
-  font-size: 1.5em;
-}
+/* ==========================================================================
+   5. BUSCADOR
+   ========================================================================== */
 .search-container {
-  /* Permite posicionar elementos internos de forma absoluta con respecto a él */
   position: relative;
-  /* Puedes añadir aquí otras propiedades de centrado si es necesario */
   margin: 20px auto;
   width: 70%;
   max-width: 500px;
@@ -235,17 +125,14 @@ h4 {
 .search-container input {
   width: 100%;
   padding: 14px 18px;
-  border-radius: 12px;
   padding-left: 45px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 140, 26, 0.4); /* Mejora visual del borde */
   background: #111;
   color: #fff;
   font-size: 16px;
   outline: none;
-}
-
-.search-container input::placeholder {
-  color: #aaa;
+  box-sizing: border-box;
 }
 
 .search-container input:focus {
@@ -255,18 +142,339 @@ h4 {
 
 .search-icon {
   position: absolute;
-  top: 50%; /* Lo mueve a la mitad de la altura del contenedor */
-  left: 15px; /* Lo mueve 15px desde el borde izquierdo */
-  transform: translateY(-50%); /* Ajuste fino para centrarlo verticalmente */
-  color: #ffa500; /* Color naranja o similar para que resalte */
-  font-size: 1.2em; /* Hace que la lupa sea un poco más grande */
-  pointer-events: none; /* Crucial: permite hacer clic a través del icono para el input */
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #ffa500;
+  font-size: 1.2em;
+  pointer-events: none;
 }
 
-/* ⬅️ Esto solo se aplica en pantallas de hasta 600px de ancho */
-@media (max-width: 600px) {
-  /* Aquí va la regla específica para el celular */
-  .search-container {
-    margin: 20px 30px auto; /* ⬅️ El margen que tú necesitas */
+/* ==========================================================================
+   6. CARTA Y CATEGORÍAS
+   ========================================================================== */
+.carta {
+  padding: 30px 0px;
+  max-width: 800px;
+  margin: auto;
+}
+
+#bebidas-genericas-placeholder {
+  min-height: 200px; /* Evita saltos visuales al cargar fragmentos */
+}
+
+.categoria {
+  margin-bottom: 50px;
+}
+
+.categoria h2 {
+  border-bottom: 1px solid #e06e10;
+  border-top: 1px solid #e06e10;
+  padding: 15px 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-bottom: 1px dashed #444;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.item:active {
+  transform: scale(0.98);
+  background: #222;
+}
+
+.nombre h4 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nombre p {
+  margin: 0;
+  font-size: 14px;
+  color: #999999;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 19px;
+  color: #e06e10;
+  letter-spacing: 1px;
+}
+
+.precio-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   7. CONTROLES DE CANTIDAD (SELECTOR CELESTE)
+   ========================================================================== */
+.selector-celeste {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #ff8c00;
+  border-radius: 12px;
+  padding: 0 5px;
+  min-width: 90px;
+  height: 36px;
+}
+
+.selector-celeste button {
+  background: none;
+  border: none;
+  color: #ff8c00;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selector-celeste button:active {
+  transform: scale(0.85);
+}
+
+.cantidad-txt {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn-agregar {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.btn-agregar:active {
+  transform: scale(0.9);
+}
+
+/* ==========================================================================
+   8. BARRA DE CARRITO (STICKY)
+   ========================================================================== */
+.barra-carrito {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  color: white;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-top: 3px solid #ff8c00;
+  z-index: 1000;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 20px 20px 0 0;
+}
+
+.btn-finalizar {
+  background: #ff8c00;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   9. MODAL DE DATOS
+   ========================================================================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: none; /* Mantenemos el control con JS */
+  place-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  animation: fadeIn 0.3s ease-out;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 10001;
+}
+
+.modal-content h3 {
+  color: #1a1a1a;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  color: #444444;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.modal-content input:focus {
+  border-color: #25d366;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
+  outline: none;
+}
+
+.modal-botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-botones button {
+  border-radius: 12px;
+  padding: 15px;
+  font-weight: bold;
+  transition: transform 0.1s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-enviar-final {
+  background: #25d366;
+  color: white;
+  flex: 2;
+}
+
+.btn-cancelar {
+  background: #ff4444;
+  color: white;
+  flex: 1;
+}
+
+.modal-botones button:active {
+  transform: scale(0.95);
+}
+
+/* ==========================================================================
+   10. UTILIDADES Y ANIMACIONES
+   ========================================================================== */
+.volver {
+  color: #e06e10;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: 1px solid #e06e10;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.volver:hover {
+  background: #e06e10;
+  color: #111;
+}
+
+.material-symbols-outline {
+  font-family: "Material Symbols Outlined";
+  color: #e06e10;
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .header h1 {
+    font-size: 32px;
+  }
+}
+.pago-info {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05); /* Un fondo sutil */
+  border-radius: 12px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.alias-box {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px dashed #ff8c00; /* Borde naranja punteado */
+  display: inline-block;
+  border-radius: 6px;
+  color: #ff8c00;
+}
+.alias-box {
+  margin-top: 10px;
+  padding: 12px;
+  border: 2px dashed #ff8c00;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 140, 0, 0.1);
+}
+
+/* Efecto cuando el mouse pasa por encima */
+.alias-box:hover {
+  background-color: rgba(255, 140, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.alias-box strong {
+  color: #ff8c00;
+  font-size: 1.1em;
 }

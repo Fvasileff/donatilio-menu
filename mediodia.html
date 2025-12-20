@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mediodía - Donatilio</title>
-
-    <link rel="stylesheet" href="/donatilio-menu/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
-
   <body>
     <header class="header">
       <h1>Menú del Mediodía</h1>
       <a class="volver" href="index.html">← Volver al inicio</a>
     </header>
+
     <div class="search-container">
       <span class="search-icon">🔍</span>
       <input
@@ -30,212 +29,391 @@
 
         <div
           class="item elemento-buscable"
-          data-nombre="Pollo al horno con guarnicion Principal"
+          data-nombre="Pollo al horno con guarnicion"
         >
           <div class="nombre">
             <h4>Pollo al horno con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6000</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Pollo al Horno"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Pollo al Horno', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Tartas variedades diversas Principal Vegetariano"
+          data-nombre="Tartas variedades diversas"
         >
           <div class="nombre">
             <h4>Tartas de variedades diversas</h4>
-
             <p>Consultar variedades</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Tarta Variedad"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Tarta Variedad', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Calzones variedades diversas Principal"
+          data-nombre="Calzones variedades diversas"
         >
           <div class="nombre">
             <h4>Calzones de variedades diversas</h4>
-
             <p>Consultar variedades</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div class="controles-cantidad" data-id="Calzones" data-precio="">
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Calzones', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Kippies con guarnicion Principal Carne"
+          data-nombre="Kippies con guarnicion"
         >
           <div class="nombre">
             <h4>Kippies con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div class="controles-cantidad" data-id="Kippies" data-precio="">
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Kippies', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Albondigas con guarnicion Principal Carne"
+          data-nombre="Albondigas con guarnicion"
         >
           <div class="nombre">
             <h4>Albondigas con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div class="controles-cantidad" data-id="Albondigas" data-precio="">
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Albondigas', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Costeleta Ternera con guarnicion Principal"
+          data-nombre="Costeleta Ternera con guarnicion"
         >
           <div class="nombre">
             <h4>Costeleta con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Costeleta Ternera"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Costeleta Ternera', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Costeleta de cerdo con guarnicion Principal Cerdo"
+          data-nombre="Costeleta de cerdo con guarnicion"
         >
           <div class="nombre">
             <h4>Costeleta de cerdo con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Costeleta Cerdo"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Costeleta Cerdo', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Bombas de carne con guarnicion Principal"
+          data-nombre="Bombas de carne con guarnicion"
         >
           <div class="nombre">
             <h4>Bombas de carne con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Bombas Carne"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Bombas Carne', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Bombas de queso con guarnicion Principal Vegetariano"
+          data-nombre="Bombas de queso con guarnicion"
         >
           <div class="nombre">
             <h4>Bombas de queso con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Bombas Queso"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Bombas Queso', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Fideos tipo caseros con guarnicion Principal Pastas"
+          data-nombre="Fideos tipo caseros con guarnicion"
         >
           <div class="nombre">
             <h4>Fideos tipo caseros con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Fideos Caseros"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Fideos Caseros', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Suprema Pollo con guarnicion Principal"
+          data-nombre="Suprema Pollo con guarnicion"
         >
           <div class="nombre">
             <h4>Suprema con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Suprema Guarn"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Suprema Guarn', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
         <div
           class="item elemento-buscable"
-          data-nombre="Mila de cerdo con guarnicion Principal Cerdo"
+          data-nombre="Mila de cerdo con guarnicion"
         >
           <div class="nombre">
             <h4>Mila de cerdo con guarnicion</h4>
-
             <p>Consultar guarnicion</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Mila Cerdo Guarn"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Mila Cerdo Guarn', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div
-          class="item elemento-buscable"
-          data-nombre="Ensalada especial Lechuga Tomate Zanahoria Huevo Principal Vegetariano"
-        >
+        <div class="item elemento-buscable" data-nombre="Ensalada especial">
           <div class="nombre">
             <h4>Ensalada especial</h4>
-
-            <p>Lechuga , tomate, zanahoria y huevo.</p>
+            <p>Lechuga, tomate, zanahoria y huevo.</p>
           </div>
-          <span class="precio">$6500</span>
+          <div class="precio-container">
+            <span class="precio">$Consultar</span>
+            <div
+              class="controles-cantidad"
+              data-id="Ensalada Especial"
+              data-precio=""
+            >
+              <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Ensalada Especial', )"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="categoria">
-        <h2>Guarniciones</h2>
-
-        <div
-          class="item elemento-buscable"
-          data-nombre="Papas Fritas Guarnicion"
-        >
-          <div class="nombre">
-            <h4>Papas Fritas</h4>
-
-            <p></p>
-          </div>
-          <span class="precio"></span>
+        <h2>Guarniciones (Acompañamientos)</h2>
+        <p style="padding: 0 15px; font-size: 0.9rem; color: #666">
+          Nota: Las guarniciones están incluidas en el precio del plato
+          principal.
+        </p>
+        <div class="item elemento-buscable" data-nombre="Papas Fritas">
+          <div class="nombre"><h4>Papas Fritas</h4></div>
         </div>
-
-        <div
-          class="item elemento-buscable"
-          data-nombre="Arroz frito Guarnicion"
-        >
-          <div class="nombre">
-            <h4>Arroz frito</h4>
-
-            <p></p>
-          </div>
-          <span class="precio"></span>
+        <div class="item elemento-buscable" data-nombre="Arroz frito">
+          <div class="nombre"><h4>Arroz frito</h4></div>
         </div>
-
-        <div class="item elemento-buscable" data-nombre="Pure Guarnicion">
-          <div class="nombre">
-            <h4>Pure</h4>
-
-            <p></p>
-          </div>
-          <span class="precio"></span>
+        <div class="item elemento-buscable" data-nombre="Pure">
+          <div class="nombre"><h4>Pure</h4></div>
         </div>
-
-        <div
-          class="item elemento-buscable"
-          data-nombre="Ensalada mixta Guarnicion Lechuga Tomate"
-        >
-          <div class="nombre">
-            <h4>Ensalada mixta</h4>
-
-            <p></p>
-          </div>
-          <span class="precio"></span>
+        <div class="item elemento-buscable" data-nombre="Ensalada mixta">
+          <div class="nombre"><h4>Ensalada mixta</h4></div>
         </div>
       </section>
+
       <div id="bebidas-genericas-placeholder"></div>
     </main>
 
-    <script src="main.js"></script>
+    <div id="barra-carrito" class="barra-carrito" style="display: none">
+      <div>
+        <span id="cant-items">0 productos</span><br />
+        <strong id="total-carrito" style="font-size: 1.2rem; color: #ff8c00"
+          >$0</strong
+        >
+      </div>
+      <button class="btn-finalizar" onclick="enviarPedido()">
+        ENVIAR PEDIDO
+      </button>
+    </div>
+
+    <div id="modal-datos" class="modal" style="display: none">
+      <div class="modal-content">
+        <h3>Casi listo...</h3>
+        <p>Completá tus datos para el envío:</p>
+
+        <input
+          type="text"
+          id="cliente-nombre"
+          placeholder="Tu nombre *"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          id="cliente-direccion"
+          placeholder="Dirección / Retiro en local *"
+          autocomplete="off"
+        />
+
+        <input
+          type="text"
+          id="cliente-aclaraciones"
+          placeholder="Aclaraciones (Piso/Depto/Casa) - Opcional"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          id="cliente-entrecalles"
+          placeholder="Entrecalles - Opcional"
+          autocomplete="off"
+        />
+
+        <div class="modal-botones">
+          <button onclick="cerrarModal()" class="btn-cancelar">CANCELAR</button>
+          <button onclick="procesarEnvioFinal()" class="btn-enviar-final">
+            CONTINUAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/carrito.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

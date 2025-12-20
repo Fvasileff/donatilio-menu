@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donatilio - Carta Digital</title>
-    <link rel="stylesheet" href="/donatilio-menu/css/style.css" />
+    <link rel="icon" href="img/Logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="img/Logo.png" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header class="header">
@@ -13,7 +15,7 @@
         alt="Logo Tótem Tiki Minimalista"
         class="logo-bar"
       />
-      <link rel="icon" href="img/favicon.png" type="image/png" />
+
       <h1>DONATILIO</h1>
       <p class="subtitulo">Selecciona la Carta de tu Momento</p>
     </header>
@@ -35,11 +37,27 @@
         <h2><span class="material-symbols-outline">local_bar</span>Noche</h2>
         <p>Hamburguesas que no se olvidan</p>
       </a>
-      <p>
-        💳 Medios de pago <br />Transferencia y efectivo <br />
-        Alias: Monasterio.bar.2142
-      </p>
+
+      <div class="pago-info">
+        <p>💳 <strong>Medios de pago</strong></p>
+        <p>Transferencia y efectivo</p>
+        <div
+          class="alias-box"
+          style="cursor: pointer"
+          onclick="navigator.clipboard.writeText('Monasterio.bar.2142').then(() => { 
+                  document.getElementById('mensaje-copiado').style.display='inline'; 
+                  setTimeout(() => { document.getElementById('mensaje-copiado').style.display='none'; }, 2000); 
+                })"
+        >
+          Alias: <strong id="alias-texto">Monasterio.bar.2142</strong>
+          <br />
+          <small id="mensaje-copiado" style="display: none; color: #25d366"
+            >¡Copiado!</small
+          >
+        </div>
+      </div>
     </main>
     <script src="main.js"></script>
+    <script src="js/carrito.js"></script>
   </body>
 </html>
