@@ -30,10 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (path.includes("mediodia.html") || path.includes("noche.html")) {
     // Llama a la función de carga
-    loadFragment(
-      "/donatilio-menu/bebidas.html",
-      "bebidas-genericas-placeholder"
-    );
+    loadFragment("/bebidas.html", "bebidas-genericas-placeholder");
   }
 });
 

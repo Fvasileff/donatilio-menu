@@ -128,70 +128,81 @@ function verificarHorario() {
   const dia = ahora.getDay(); // 0:Dom, 1:Lun, 2:Mar, 3:Mié, 4:Jue, 5:Vie, 6:Sáb
   const hora = ahora.getHours();
   const minutos = ahora.getMinutes();
-  const tiempoActual = hora * 60 + minutos; // Convertimos todo a minutos del día
+  const tiempoActual = hora * 60 + minutos;
 
   let estaAbierto = false;
   let mensajeAviso = "";
 
-  // 1. DÍAS CERRADOS (MARTES Y DOMINGO)
-  if (dia === 2 || dia === 0) {
-    estaAbierto = false;
-    mensajeAviso = "Hoy estamos cerrados";
-  } else {
-    // 2. DEFINIR TURNOS EN MINUTOS
-    const aperturaM = 7 * 60; // 07:00 AM
-    const cierreM = 15 * 60; // 15:00 PM
-    const aperturaN = 18 * 60; // 18:00 PM
+  // --- CONFIGURACIÓN DE HORARIOS ---
+  const aperturaM = 7 * 60; // 07:00
+  const cierreM = 15 * 60; // 15:00
+  const aperturaN = 18 * 60; // 18:00
+  const cierreN_Normal = 24 * 60; // 00:00 (Lun a Jue)
+  const cierreN_Extendido = 25 * 60; // 01:00 (Vie y Sáb)
 
-    // Cierre nocturno: Viernes(5) y Sábado(6) a la 01:00 AM, otros a las 00:00
-    let cierreN = dia === 5 || dia === 6 ? 25 * 60 : 24 * 60;
+  // --- LÓGICA DE APERTURA ---
 
-    // 3. LÓGICA DE VALIDACIÓN
-    // Caso especial: Si estamos entre las 00:00 y la 01:00 AM de un Sábado o Domingo
-    // (Viene del turno noche del día anterior)
-    if (tiempoActual < 1 * 60 && (dia === 6 || dia === 0)) {
+  // 1. CASO ESPECIAL: Madrugada (00:00 a 01:00)
+  // Si es Domingo antes de la 1am, revisamos si el Sábado cerraba tarde.
+  // Si es Sábado antes de la 1am, revisamos si el Viernes cerraba tarde.
+  if (tiempoActual < 1 * 60) {
+    if (dia === 0 || dia === 6) {
       estaAbierto = true;
     }
-    // Turno Mañana
-    else if (tiempoActual >= aperturaM && tiempoActual < cierreM) {
+  }
+
+  // 2. HORARIO NORMAL DEL DÍA (Excepto Domingo que está cerrado todo el día)
+  else if (dia !== 0) {
+    // Turno Mañana (Igual para todos)
+    if (tiempoActual >= aperturaM && tiempoActual < cierreM) {
       estaAbierto = true;
     }
-    // Turno Tarde/Noche
-    else if (tiempoActual >= aperturaN && tiempoActual < cierreN) {
-      estaAbierto = true;
-    }
-    // Si no cumple nada, está cerrado
-    else {
-      estaAbierto = false;
-      if (tiempoActual < aperturaM) {
-        mensajeAviso = "Abrimos a las 07:00 hs";
-      } else if (tiempoActual >= cierreM && tiempoActual < aperturaN) {
-        mensajeAviso = "Abrimos a las 18:00 hs";
-      } else {
-        mensajeAviso = "Abrimos mañana a las 07:00 hs";
+    // Turno Noche
+    else if (tiempoActual >= aperturaN) {
+      // Si es Viernes (5) o Sábado (6), cierra a la 1:00 AM (25*60)
+      if (dia === 5 || dia === 6) {
+        if (tiempoActual < cierreN_Extendido) estaAbierto = true;
+      }
+      // Si es otro día, cierra a las 00:00 (24*60)
+      else {
+        if (tiempoActual < cierreN_Normal) estaAbierto = true;
       }
     }
   }
 
-  // 4. ACTUALIZAR INTERFAZ
+  // --- DEFINIR MENSAJES DE AVISO SI ESTÁ CERRADO ---
+  if (!estaAbierto) {
+    if (dia === 0) {
+      mensajeAviso = "Domingos cerrado";
+    } else if (tiempoActual < aperturaM) {
+      mensajeAviso = "Abrimos a las 07:00 hs";
+    } else if (tiempoActual >= cierreM && tiempoActual < aperturaN) {
+      mensajeAviso = "Abrimos a las 18:00 hs";
+    } else {
+      mensajeAviso = "Abrimos mañana a las 07:00 hs";
+    }
+  }
+
+  // --- ACTUALIZAR INTERFAZ ---
   const btnEnviar = document.querySelector(".btn-finalizar");
   const textoEstado = document.getElementById("estado-horario");
 
   if (estaAbierto) {
     if (btnEnviar) {
       btnEnviar.disabled = false;
-      btnEnviar.style.backgroundColor = "#25d366"; // Verde WhatsApp
+      btnEnviar.style.backgroundColor = "#25d366";
       btnEnviar.innerText = "ENVIAR PEDIDO";
-      btnEnviar.style.cursor = "pointer";
       btnEnviar.style.opacity = "1";
     }
-    if (textoEstado) textoEstado.innerText = "¡Estamos abiertos!";
+    if (textoEstado) {
+      textoEstado.innerText = "¡Estamos abiertos!";
+      textoEstado.style.color = "#25d366";
+    }
   } else {
     if (btnEnviar) {
       btnEnviar.disabled = true;
       btnEnviar.style.backgroundColor = "#555";
       btnEnviar.innerText = "CERRADO";
-      btnEnviar.style.cursor = "not-allowed";
       btnEnviar.style.opacity = "0.6";
     }
     if (textoEstado) {
@@ -200,6 +211,5 @@ function verificarHorario() {
     }
   }
 }
-
 // Ejecutar al cargar la página
 document.addEventListener("DOMContentLoaded", verificarHorario);
